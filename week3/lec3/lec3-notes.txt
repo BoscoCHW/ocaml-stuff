@@ -1,0 +1,19 @@
+- Exceptions
+  * can define our own exceptions, e.g. exception Empty
+  * raise
+	* try/with
+
+- I/O
+  * Printf: printf, fprintf, sprint, eprintf
+	* Scanf: scanf
+
+- partial vs total functions
+- pure vs impure functions (calculations/computations vs actions)
+  * no side effects vs has side effects
+
+- sum types (variants)
+  * type 'a bstree = Leaf | Node of 'a * 'a bstree * 'a bstree
+	  - bstree is a type constructor
+		- Leaf and Node are data/value constructor
+		  * Leaf is already a value
+		- note: constructors are not functions

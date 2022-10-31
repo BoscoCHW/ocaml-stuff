@@ -1,0 +1,10 @@
+### Starting build.
+# Target: sum_int.ml.depends, tags: { extension:ml, file:sum_int.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules sum_int.ml > sum_int.ml.depends
+# Target: sum_int.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:sum_int.cmo, file:sum_int.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o sum_int.cmo sum_int.ml
+# Target: sum_int.cmx, tags: { compile, extension:cmx, extension:ml, file:sum_int.cmx, file:sum_int.ml, implem, native, ocaml, quiet }
+ocamlopt.opt -c -o sum_int.cmx sum_int.ml
+# Target: sum_int.native, tags: { dont_link_with, extension:native, file:sum_int.native, link, native, ocaml, program, quiet }
+ocamlopt.opt sum_int.cmx -o sum_int.native
+# Compilation successful.

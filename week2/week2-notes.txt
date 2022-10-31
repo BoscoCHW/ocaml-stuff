@@ -1,0 +1,24 @@
+- parametric polymorphism
+
+- anonymous function: fun x -> x * x
+
+- higher-order functions, e.g. map, filter
+
+- insertion sort
+
+- @@ and |>: alread defined 
+  let (@@) f x = f x
+	let (|>) x f = f x
+
+- fold_left and fold_right:
+
+Assume ($) is an operator of the appropriate type
+
+
+fold_left a [x1; x2; x3]  =>  (((a $ x1) $ x2) $ x3)  (* process list forward *)
+
+fold_right [x1; x2; x3] a =>  (x1 $ (x2 $ (x3 $ a)))  (* process list in reverse *)
+
+associativity: x $ (y $ z) = (x $ y) $ z
+
+if $ is associative, fold_left and fold_right give the same answer
