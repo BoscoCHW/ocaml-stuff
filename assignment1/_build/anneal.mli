@@ -1,1 +1,0 @@
-val run : 'a * ('a -> float) * ('a -> 'a) -> float * float * int -> int -> 'a
