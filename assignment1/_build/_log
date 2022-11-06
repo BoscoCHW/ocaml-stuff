@@ -1,0 +1,26 @@
+### Starting build.
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamldep.opt -modules main.ml > main.ml.depends # cached
+# Target: tsp.mli.depends, tags: { extension:mli, file:tsp.mli, ocaml, ocamldep, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamldep.opt -modules tsp.mli > tsp.mli.depends # cached
+# Target: tsp.cmi, tags: { byte, compile, extension:mli, file:tsp.mli, interf, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlc.opt -c -o tsp.cmi tsp.mli # cached
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlc.opt -c -o main.cmo main.ml # cached
+# Target: tsp.ml.depends, tags: { extension:ml, file:tsp.ml, ocaml, ocamldep, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamldep.opt -modules tsp.ml > tsp.ml.depends # cached
+# Target: anneal.ml.depends, tags: { extension:ml, file:anneal.ml, ocaml, ocamldep, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamldep.opt -modules anneal.ml > anneal.ml.depends
+# Target: anneal.mli.depends, tags: { extension:mli, file:anneal.mli, ocaml, ocamldep, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamldep.opt -modules anneal.mli > anneal.mli.depends # cached
+# Target: anneal.cmi, tags: { byte, compile, extension:mli, file:anneal.mli, interf, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlc.opt -c -o anneal.cmi anneal.mli # cached
+# Target: anneal.cmx, tags: { compile, extension:cmx, extension:ml, file:anneal.cmx, file:anneal.ml, implem, native, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlopt.opt -c -o anneal.cmx anneal.ml
+# Target: tsp.cmx, tags: { compile, extension:cmx, extension:ml, file:tsp.cmx, file:tsp.ml, implem, native, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlopt.opt -c -o tsp.cmx tsp.ml # cached
+# Target: main.cmx, tags: { compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlopt.opt -c -o main.cmx main.ml # cached
+# Target: main.native, tags: { dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet }
+/home/bosco/.opam/4.13.1/bin/ocamlopt.opt anneal.cmx tsp.cmx main.cmx -o main.native
+# Compilation successful.
